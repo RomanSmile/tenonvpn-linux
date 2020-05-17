@@ -1,0 +1,17 @@
+receive bootstrap res, [165.227.18.179:9001] vpn nodes: 46, route nodes: 46
+receive bootstrap res, [165.227.18.179:9002] vpn nodes: 46, route nodes: 46
+receive bootstrap res, [165.227.60.177:9001] vpn nodes: 31, route nodes: 22
+receive bootstrap res, [46.101.152.5:9002] vpn nodes: 48, route nodes: 46
+ 2020-05-17 11:30:42 INFO: use smart route[1], route_ip[1856682718], route port[41492],vpn_ip[2423606573], vpn_port[13504], seckey[ae3dff5547741b45fe0340c0bda6ec5aa0890a8984988b15980781c93a1fca69], pubkey[033107eeab5b37d880deea278a2a2986cb5eb81470f33862cee1eb29a8dfdd2caa], method[aes-128-cfb] status_file[./pristatus]
+ 2020-05-17 11:30:42 INFO: using tcp fast open
+ 2020-05-17 11:30:42 INFO: initializing ciphers... ae3dff5547741b45fe0340c0bda6ec5aa0890a8984988b15980781c93a1fca69, aes-128-cfb
+ 2020-05-17 11:30:42 INFO: listening at 127.0.0.1:6380
+ 2020-05-17 11:30:42 INFO: tcp port reuse enabled
+ 2020-05-17 11:30:42 INFO: running from root user
+receive bootstrap res, [165.227.18.179:9001] vpn nodes: 46, route nodes: 46
+ 2020-05-17 12:02:48 INFO: use smart route[1], route_ip[1856682718], route port[41492],vpn_ip[2423606573], vpn_port[13504], seckey[ae3dff5547741b45fe0340c0bda6ec5aa0890a8984988b15980781c93a1fca69], pubkey[033107eeab5b37d880deea278a2a2986cb5eb81470f33862cee1eb29a8dfdd2caa], method[aes-128-cfb] status_file[./pristatus]
+ 2020-05-17 12:02:48 INFO: using tcp fast open
+ 2020-05-17 12:02:48 INFO: initializing ciphers... ae3dff5547741b45fe0340c0bda6ec5aa0890a8984988b15980781c93a1fca69, aes-128-cfb
+ 2020-05-17 12:02:48 INFO: listening at 127.0.0.1:6380
+ 2020-05-17 12:02:48 INFO: tcp port reuse enabled
+ 2020-05-17 12:02:48 INFO: running from root user
