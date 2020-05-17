@@ -10,7 +10,7 @@
 ### 用法
 #### 1. 下载代码:
 
-      git clone https://github.com/tenondvpn/tenonvpn-join.git
+      git clone git@github.com:tenondvpn/tenonvpn-linux.git
       or
       wget https://github.com/tenondvpn/tenonvpn-join/archive/1.1.5.zip
 
@@ -35,7 +35,7 @@
 ### How to use
 #### 1. Download the code:
 
-      git clone https://github.com/tenondvpn/tenonvpn-join.git
+      git clone git@github.com:tenondvpn/tenonvpn-linux.git
       or
       wget https://github.com/tenondvpn/tenonvpn-join/archive/1.1.5.zip
 
