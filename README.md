@@ -1,6 +1,6 @@
 
-# 官网请访问：     https://www.tenonvpn.net
-# visit Official: https://www.tenonvpn.net
+###### 官网请访问：     https://www.tenonvpn.net
+###### visit Official: https://www.tenonvpn.net
 
 ##### tenonvpn for linux
 ##### Currently supports: centos, debian, ubuntu ...
@@ -27,9 +27,9 @@
 # 
 # 
 
-linux下的tenonvpn客户端
+##### linux下的tenonvpn客户端
 
-当前支持： centos, debian, ubuntu ...
+##### 当前支持： centos, debian, ubuntu ...
 
 
 ## 用法
