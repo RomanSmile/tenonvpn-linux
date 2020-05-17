@@ -23,7 +23,7 @@
       访问网站：tenonvpn curl https://www.tenonvpn.net
       打开应用：tenonvpn google-chrome &
       
-#### 3. 卸载
+#### 4. 卸载
 
       tenonvpn remove
       
