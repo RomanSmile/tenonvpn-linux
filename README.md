@@ -20,7 +20,8 @@
      
 #### 3. 使用
       
-      tenonvpn curl https://www.tenonvpn.net
+      访问网站：tenonvpn curl https://www.tenonvpn.net
+      打开应用：tenonvpn google-chrome &
       
 #### 3. 卸载
 
@@ -45,7 +46,8 @@
      
 #### 3. use
       
-      tenonvpn curl https://www.tenonvpn.net
+      visit website： tenonvpn curl https://www.tenonvpn.net
+           open app： tenonvpn google-chrome &
 
 #### 4. remove
       
