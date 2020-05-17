@@ -41,7 +41,7 @@ linux下的tenonvpn客户端
 
 ### 2. 安装
 
-      sh ./tenonvpn.sh install
+      bash ./tenonvpn.sh install
      
 ### 3. 使用
       
