@@ -29,7 +29,7 @@
 
 # linux下的tenonvpn客户端
 
-##### 当前支持： centos, debian, ubuntu ...
+### 当前支持： centos, debian, ubuntu ...
 
 
 ### 用法
