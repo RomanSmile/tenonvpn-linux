@@ -34,10 +34,12 @@ then
     then
         cp -rf $tenonvpn_path/local/pkgs/tenonvpn_centos  $tenonvpn_path/local/tenonvpn_local
         cp -rf $tenonvpn_path/local/pkgs/redirect_centos  $tenonvpn_path/local/redirect
+        cp -rf $tenonvpn_path/local/pkgs/libproxychains4.so_centos /usr/lib/libproxychains4.so
         cd $tenonvpn_path/local && nohup ./tenonvpn_local & > /dev/null 2>&1
     else
         cp -rf $tenonvpn_path/local/pkgs/tenonvpn_other  $tenonvpn_path/local/tenonvpn_local
         cp -rf $tenonvpn_path/local/pkgs/redirect_other  $tenonvpn_path/local/redirect
+        cp -rf $tenonvpn_path/local/pkgs/libproxychains4.so_other /usr/lib/libproxychains4.so
         cd $tenonvpn_path/local && nohup ./tenonvpn_local & > /dev/null 2>&1
     fi
 
@@ -50,6 +52,8 @@ then
     ps -ef | grep tenonvpn_local | awk -F' ' '{print $2}' | xargs kill -9 > /dev/null 2>&1
     rm -rf $tenonvpn_path
     rm -rf /usr/bin/tenonvpn
+    rm -rf /usr/lib/libproxychains4.so
+    unset LD_PRELOAD
     echo -e "\033[00;32mremove success.\033[0m\n"
     exit 0
 fi
