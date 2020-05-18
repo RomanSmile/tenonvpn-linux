@@ -14,7 +14,7 @@
       or
       wget https://github.com/tenondvpn/tenonvpn-linux/archive/1.0.3.zip
 
-#### 2. 安装
+#### 2. 安装，解压后进入解压目录
 
       bash ./tenonvpn.sh install
      
