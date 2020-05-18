@@ -1,6 +1,6 @@
 
 ###### 官网请访问：     https://www.tenonvpn.net
-###### visit Official: https://www.tenonvpn.net
+###### visit official: https://www.tenonvpn.net
 
 # linux下的tenonvpn客户端
 
