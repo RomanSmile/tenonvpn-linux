@@ -26,13 +26,6 @@
 #### 4. 卸载
 
       tenonvpn remove
-      unset LD_PRELOAD
-      
-### 也可以全局代理设置，安装后，执行下面命令：
-      export LD_PRELOAD=/usr/lib/libproxychains4.so
-      
-      然后直接调用：curl https://www.tenonvpn.net
-      
 
 # 
 
@@ -58,18 +51,4 @@
 #### 4. remove
       
       tenonvpn remove
-      unset LD_PRELOAD
-      
-### You can also set the global proxy. After installation, execute the following command:
-      export LD_PRELOAD=/usr/lib/libproxychains4.so
-      
-      then direct use：curl https://www.tenonvpn.net
-      
-
-
-
-
     
-    
-
-
