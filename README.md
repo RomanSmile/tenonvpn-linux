@@ -12,7 +12,7 @@
 
       git clone git@github.com:tenondvpn/tenonvpn-linux.git
       or
-      wget https://github.com/tenondvpn/tenonvpn-linux/archive/1.0.1.zip
+      wget https://github.com/tenondvpn/tenonvpn-linux/archive/1.0.2.zip
 
 #### 2. 安装
 
@@ -44,7 +44,7 @@
 
       git clone git@github.com:tenondvpn/tenonvpn-linux.git
       or
-      wget https://github.com/tenondvpn/tenonvpn-linux/archive/1.0.1.zip
+      wget https://github.com/tenondvpn/tenonvpn-linux/archive/1.0.2.zip
 
 #### 2. install
 
