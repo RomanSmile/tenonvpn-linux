@@ -16,7 +16,7 @@
 
 #### 2. 安装，解压后进入解压目录
 
-      bash ./tenonvpn.sh install
+      bash tenonvpn.sh install
      
 #### 3. 使用
       
