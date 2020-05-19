@@ -41,7 +41,7 @@
 
 #### 2. install
 
-      bash ./tenonvpn.sh install
+      bash tenonvpn.sh install
      
 #### 3. use
       
