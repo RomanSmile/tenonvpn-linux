@@ -58,6 +58,23 @@ then
     exit 0
 fi
 
+if [[ $1 == "des" ]]
+then
+    valid_ct=("AQ" "BI" "CF" "TD" "CG" "RW" "ZR" "BZ" "CR" "SV" "GT" "HN" "MX" "NI" "PA" "KZ" "KG" "TJ" "TM" "UZ" "AT" "CZ" "HU" "LI" "SK" "CH" "CN" "JP" "KP" "KR" "TW" "HK" "MO" "DJ" "ER" "ET" "KE" "SO" "TZ" "UG" "BY" "EE" "LV" "LT" "MD" "PL" "UA" "KM" "MG" "MU" "YT" "RE" "SC" "CA" "GL" "PM" "US" "UM" "DZ" "EG" "LY" "MA" "SD" "TN" "EH" "MN" "RU" "DK" "FO" "FI" "IS" "NO" "SJ" "SE" "AS" "AU" "CK" "FJ" "PF" "GU" "KI" "MH" "FM" "NR" "NC" "NZ" "NU" "NF" "MP" "PW" "PG" "PN" "SB" "TK" "TO" "TV" "VU" "WF" "WS" "AR" "BO" "BR" "CL" "CO" "EC" "FK" "GF" "GY" "PY" "PE" "SR" "UY" "VE" "AF" "BD" "BT" "IN" "MV" "NP" "PK" "LK" "IO" "BV" "SH" "GS" "BN" "KH" "CX" "CC" "ID" "LA" "MY" "MM" "PH" "SG" "TH" "VN" "TP" "AL" "BA" "BG" "HR" "GR" "MK" "RO" "SI" "YU" "AM" "AZ" "BH" "CY" "GE" "IR" "IQ" "IL" "JO" "KW" "LB" "OM" "QA" "SA" "SY" "TR" "AE" "YE" "AD" "GI" "PT" "ES" "AO" "BW" "LS" "MW" "MZ" "NA" "ZA" "SZ" "ZM" "ZW" "VA" "IT" "MT" "SM" "TF" "HM" "AI" "AG" "AW" "BS" "BB" "BM" "VG" "KY" "CU" "DM" "DO" "GD" "GP" "HT" "JM" "MQ" "MS" "AN" "PR" "KN" "LC" "VC" "TT" "TC" "VI" "BJ" "BF" "CM" "CV" "CI" "GQ" "GA" "GM" "GH" "GN" "GW" "LR" "ML" "MR" "NE" "NG" "ST" "SN" "SL" "TG" "BE" "FR" "DE" "IE" "LU" "MC" "NL" "GB" "UK" "FX")
+    for i in ${valid_ct[@]}
+    do
+       if [[ "$i" == "$2" ]]
+       then
+           echo $2 > /var/tmp/tenon
+           echo -e "\033[00;32mset destination country success.\033[0m\n"
+           exit 0
+       fi
+    done
+
+    echo -e "\033[00;31mset destination country failed.\033[0m\n"
+    exit 1
+fi
+
 started="`pidof tenonvpn_local`"
 if [[ started == "" ]]
 then
@@ -81,7 +98,7 @@ status=`cat $tenonvpn_path/local/pristatus`
 if [[ $status == "bwo" ]]
 then
     buy_url=`cat $tenonvpn_path/local/url`
-    echo -e "\033[00;31流量已经用完，请充值或者明天继续使用。充值链接: \n"$buy_url"\n.\033[0m\n"
+    echo -e "\033[00;31The bandwidth has been used up, please recharge or continue to use it tomorrow. Recharge link: \n"$buy_url"\n.\033[0m\n"
     > $tenonvpn_path/local/pristatus
     exit 0
 fi
