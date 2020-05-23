@@ -17,13 +17,17 @@
 #### 2. 安装，解压后进入解压目录
 
       bash tenonvpn.sh install
+      
+#### 3. 修改目标国家（默认美国）, 使用国家简码
+
+      tenonvpn des US
      
-#### 3. 使用
+#### 4. 使用
       
       访问网站：tenonvpn curl https://www.tenonvpn.net
       打开应用：tenonvpn google-chrome &
       
-#### 4. 卸载
+#### 5. 卸载
 
       tenonvpn remove
 
@@ -43,12 +47,16 @@
 
       bash tenonvpn.sh install
      
-#### 3. use
+#### 3. change destination country, default US
+
+      tenonvpn des US
+      
+#### 4. use
       
       visit website： tenonvpn curl https://www.tenonvpn.net
            open app： tenonvpn google-chrome &
 
-#### 4. remove
+#### 5. remove
       
       tenonvpn remove
     
