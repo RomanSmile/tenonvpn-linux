@@ -65,6 +65,7 @@ then
     do
        if [[ "$i" == "$2" ]]
        then
+           mkdir -p /var/tmp/
            echo $2 > /var/tmp/tenon
            echo -e "\033[00;32mset destination country success.\033[0m\n"
            exit 0
