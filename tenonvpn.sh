@@ -60,20 +60,24 @@ fi
 
 if [[ $1 == "des" ]]
 then
+    des_country=$2
     valid_ct=("AQ" "BI" "CF" "TD" "CG" "RW" "ZR" "BZ" "CR" "SV" "GT" "HN" "MX" "NI" "PA" "KZ" "KG" "TJ" "TM" "UZ" "AT" "CZ" "HU" "LI" "SK" "CH" "CN" "JP" "KP" "KR" "TW" "HK" "MO" "DJ" "ER" "ET" "KE" "SO" "TZ" "UG" "BY" "EE" "LV" "LT" "MD" "PL" "UA" "KM" "MG" "MU" "YT" "RE" "SC" "CA" "GL" "PM" "US" "UM" "DZ" "EG" "LY" "MA" "SD" "TN" "EH" "MN" "RU" "DK" "FO" "FI" "IS" "NO" "SJ" "SE" "AS" "AU" "CK" "FJ" "PF" "GU" "KI" "MH" "FM" "NR" "NC" "NZ" "NU" "NF" "MP" "PW" "PG" "PN" "SB" "TK" "TO" "TV" "VU" "WF" "WS" "AR" "BO" "BR" "CL" "CO" "EC" "FK" "GF" "GY" "PY" "PE" "SR" "UY" "VE" "AF" "BD" "BT" "IN" "MV" "NP" "PK" "LK" "IO" "BV" "SH" "GS" "BN" "KH" "CX" "CC" "ID" "LA" "MY" "MM" "PH" "SG" "TH" "VN" "TP" "AL" "BA" "BG" "HR" "GR" "MK" "RO" "SI" "YU" "AM" "AZ" "BH" "CY" "GE" "IR" "IQ" "IL" "JO" "KW" "LB" "OM" "QA" "SA" "SY" "TR" "AE" "YE" "AD" "GI" "PT" "ES" "AO" "BW" "LS" "MW" "MZ" "NA" "ZA" "SZ" "ZM" "ZW" "VA" "IT" "MT" "SM" "TF" "HM" "AI" "AG" "AW" "BS" "BB" "BM" "VG" "KY" "CU" "DM" "DO" "GD" "GP" "HT" "JM" "MQ" "MS" "AN" "PR" "KN" "LC" "VC" "TT" "TC" "VI" "BJ" "BF" "CM" "CV" "CI" "GQ" "GA" "GM" "GH" "GN" "GW" "LR" "ML" "MR" "NE" "NG" "ST" "SN" "SL" "TG" "BE" "FR" "DE" "IE" "LU" "MC" "NL" "GB" "UK" "FX")
     for i in ${valid_ct[@]}
     do
-       if [[ "$i" == "$2" ]]
+       if [[ "$i" == "$des_country" ]]
        then
-           mkdir -p /var/tmp/
-           echo $2 > /var/tmp/tenon
-           echo -e "\033[00;32mset destination country success.\033[0m\n"
-           exit 0
+            echo $des_country > /var/tmp/tenon
+            ps -ef | grep tenonvpn_local | awk -F' ' '{print $2}' | xargs kill -9 > /dev/null 2>&1
+            cd $tenonvpn_path/local && nohup ./tenonvpn_local & > /dev/null 2>&1
+            sleep 2
+            tenonvpn curl ipinfo.io
+            echo -e "\033[00;32mset destination country success."$des_country"\033[0m\n"
+            exit 0
        fi
     done
 
-    echo -e "\033[00;31mset destination country failed.\033[0m\n"
-    exit 1
+    echo -e "\033[00;31mset destination country failed.\033[0m "$2"\n"
+    exit 0
 fi
 
 started="`pidof tenonvpn_local`"
