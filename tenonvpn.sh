@@ -19,6 +19,8 @@ check_sys(){
 }
 
 tenonvpn_path="/usr/local/tenonvpn"
+date_now=`date +%s`
+date_now=`expr $date_now / 3600`
 if [[ $1 == "install" ]]
 then
     rm -rf $tenonvpn_path
@@ -43,6 +45,7 @@ then
         cd $tenonvpn_path/local && nohup ./tenonvpn_local & > /dev/null 2>&1
     fi
 
+    echo $date_now > /var/tmp/tenon_day
     echo -e "\033[00;32minstall success.\033[0m\n"
     exit 0
 fi
@@ -106,6 +109,25 @@ then
     echo -e "\033[00;31The bandwidth has been used up, please recharge or continue to use it tomorrow. Recharge link: \n"$buy_url"\n.\033[0m\n"
     > $tenonvpn_path/local/pristatus
     exit 0
+fi
+
+date_old=`cat /var/tmp/tenon_day`
+if [[ "$date_now" != $date_old ]]
+then
+    ps -ef | grep tenonvpn_local | awk -F' ' '{print $2}' | xargs kill -9 > /dev/null 2>&1
+    cp -rf $tenonvpn_path/local/proxychains.conf /etc/ > /dev/null 2>&1
+    check_sys
+    if [[ $release == "centos" ]]
+    then
+        cp -rf $tenonvpn_path/local/pkgs/tenonvpn_centos  $tenonvpn_path/local/tenonvpn_local
+        cp -rf $tenonvpn_path/local/pkgs/redirect_centos  $tenonvpn_path/local/redirect
+        cd $tenonvpn_path/local && nohup ./tenonvpn_local & > /dev/null 2>&1
+    else
+        cp -rf $tenonvpn_path/local/pkgs/tenonvpn_other  $tenonvpn_path/local/tenonvpn_local
+        cp -rf $tenonvpn_path/local/pkgs/redirect_other  $tenonvpn_path/local/redirect
+        cd $tenonvpn_path/local && nohup ./tenonvpn_local & > /dev/null 2>&1
+    fi
+    sleep 1
 fi
 
 if [[ $# -eq 1 ]]
