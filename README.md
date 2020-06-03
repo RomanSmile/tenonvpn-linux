@@ -12,13 +12,13 @@
 
       git clone git@github.com:tenondvpn/tenonvpn-linux.git
       or
-      wget https://github.com/tenondvpn/tenonvpn-linux/archive/1.0.6.tar.gz
+      wget https://github.com/tenondvpn/tenonvpn-linux/archive/1.0.7.tar.gz
 
 #### 2. 安装，解压后进入解压目录
 
       bash tenonvpn.sh install
       
-#### 3. 修改目标国家（默认美国）, 使用国家简码
+#### 3. 跟换节点，修改目标国家（默认美国）, 使用国家简码
 
       tenonvpn des US
      
@@ -41,13 +41,13 @@
 
       git clone git@github.com:tenondvpn/tenonvpn-linux.git
       or
-      wget https://github.com/tenondvpn/tenonvpn-linux/archive/1.0.6.tar.gz
+      wget https://github.com/tenondvpn/tenonvpn-linux/archive/1.0.7.tar.gz
 
 #### 2. install
 
       bash tenonvpn.sh install
      
-#### 3. change destination country, default US
+#### 3. choose new node, change destination country, default US
 
       tenonvpn des US
       
