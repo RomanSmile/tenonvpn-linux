@@ -18,7 +18,7 @@
 
       bash tenonvpn.sh install
       
-#### 3. 跟换节点，修改目标国家（默认美国）, 使用国家简码
+#### 3. 更换节点，修改目标国家（默认美国）, 使用国家简码
 
       tenonvpn des US
      
