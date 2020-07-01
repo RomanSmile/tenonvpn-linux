@@ -20,7 +20,7 @@ check_sys(){
 
 tenonvpn_path="/usr/local/tenonvpn"
 date_now=`date +%s`
-date_now=`expr $date_now / 3600`
+date_now=`expr $date_now / 86400`
 if [[ $1 == "install" ]]
 then
     rm -rf $tenonvpn_path
