@@ -10,9 +10,9 @@
 ### 用法
 #### 1. 下载代码:
 
-      git clone git@github.com:tenondvpn/tenonvpn-linux.git
+      git clone https://github.com/tenondvpn/tenonvpn-linux.git
       or
-      wget https://github.com/tenondvpn/tenonvpn-linux/archive/1.0.8.tar.gz
+      wget https://github.com/tenondvpn/tenonvpn-linux/archive/1.0.9.tar.gz
 
 #### 2. 安装，解压后进入解压目录
 
@@ -39,9 +39,9 @@
 ### How to use
 #### 1. Download the code:
 
-      git clone git@github.com:tenondvpn/tenonvpn-linux.git
+      git clone https://github.com/tenondvpn/tenonvpn-linux.git
       or
-      wget https://github.com/tenondvpn/tenonvpn-linux/archive/1.0.8.tar.gz
+      wget https://github.com/tenondvpn/tenonvpn-linux/archive/1.0.9.tar.gz
 
 #### 2. install
 
