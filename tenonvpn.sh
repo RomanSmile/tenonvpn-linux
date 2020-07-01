@@ -28,10 +28,16 @@ then
     cp -rf ./local $tenonvpn_path
     cp -rf ./tenonvpn.sh /usr/bin/tenonvpn
     chmod 777 /usr/bin/tenonvpn
-
+    
     ps -ef | grep tenonvpn_local | awk -F' ' '{print $2}' | xargs kill -9 > /dev/null 2>&1
     cp -rf $tenonvpn_path/local/proxychains.conf /etc/ > /dev/null 2>&1
     check_sys
+    echo 3 > /proc/sys/net/ipv4/tcp_fastopen
+    if [ `grep -c "tcp_fastopen" /etc/sysctl.conf` -eq '1' ]; then
+        echo "Found!"
+    else
+        echo "net.ipv4.tcp_fastopen = 3" >> /etc/sysctl.conf
+    fi
     if [[ $release == "centos" ]]
     then
         cp -rf $tenonvpn_path/local/pkgs/tenonvpn_centos  $tenonvpn_path/local/tenonvpn_local
