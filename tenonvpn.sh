@@ -133,6 +133,7 @@ then
         cp -rf $tenonvpn_path/local/pkgs/redirect_other  $tenonvpn_path/local/redirect
         cd $tenonvpn_path/local && nohup ./tenonvpn_local & > /dev/null 2>&1
     fi
+    echo $date_now > /var/tmp/tenon_day
     sleep 1
 fi
 
